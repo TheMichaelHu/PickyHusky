@@ -1,0 +1,51 @@
+* {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+#content {
+  margin-top: 60px;
+  font-family: "Cambria", sans-serif;
+  text-transform: uppercase;
+  font-size: 100px;
+  color: white;
+}
+
+.navbar-inner li {
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  border-top: 4px solid white;
+  transition: border-top .3s;
+}
+.nav-link:hover {
+  border-top: 4px solid #FF9201;
+}
+
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+  background-image: none;
+  background-color: #FF9201;
+}
+
+.brand {
+  letter-spacing: 4px;
+  border-top: 0px solid #FF9201;
+  transition: border-top .3s;
+}
+.brand:hover {
+  border-top: 4px solid #FF9201;
+}
+.brand:hover {
+  border-top: 4px solid #FF9201;
+}
+
+.header {
+  background-color: ##FF9201;
+  /* remove the gradient */
+  background-image: none !important;
+  border-bottom: 2px solid #FF9201 !important;
+  line-height: 40px !important;
+  box-shadow: 0 12px 6px -6px rgba(0, 0, 0, 0.2) !important;
+}
+
