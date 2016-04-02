@@ -28,10 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-<<<<<<< HEAD
-=======
     bcrypt (3.1.11)
->>>>>>> origin/master
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -40,8 +37,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-<<<<<<< HEAD
-=======
     devise (3.5.6)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -49,7 +44,6 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
->>>>>>> origin/master
     erubis (2.7.0)
     execjs (2.6.0)
     hike (1.2.3)
@@ -67,10 +61,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.8.4)
     multi_json (1.11.2)
-<<<<<<< HEAD
-=======
     orm_adapter (0.5.0)
->>>>>>> origin/master
     pg (0.18.4)
     polyglot (0.3.5)
     rack (1.5.5)
@@ -99,11 +90,8 @@ GEM
     rake (11.1.2)
     rdoc (4.2.2)
       json (~> 1.4)
-<<<<<<< HEAD
-=======
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
->>>>>>> origin/master
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -135,21 +123,15 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
-<<<<<<< HEAD
-=======
     warden (1.2.6)
       rack (>= 1.0)
->>>>>>> origin/master
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-<<<<<<< HEAD
-=======
   devise
->>>>>>> origin/master
   jbuilder (~> 2.0)
   jquery-rails
   pg
