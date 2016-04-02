@@ -3,11 +3,11 @@
 }
 
 #content {
-  margin-top: 60px;
+  margin-top: 100px;
   font-family: "Cambria", sans-serif;
   text-transform: uppercase;
   font-size: 100px;
-  color: #FF9201;
+  color: #CC2B2B;
 }
 
 .navbar-inner li {
@@ -22,33 +22,33 @@
   transition: border-top .3s;
 }
 .nav-link:hover {
-  border-top: 4px solid #FF9201;
+  border-top: 4px solid #CC2B2B;
 }
 
 .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
   background-image: none;
-  background-color: #FF9201;
+  background-color: #CC2B2B;
 }
 
 .brand {
   letter-spacing: 4px;
   color: black;
-  border-top: 0px solid #FF9201;
+  border-top: 0px solid #CC2B2B;
   font-weight: bold;
   transition: border-top .3s;
 }
 .brand:hover {
-  border-top: 4px solid #FF9201;
+  border-top: 4px solid #CC2B2B;
 }
 .brand:hover {
-  border-top: 4px solid #FF9201;
+  border-top: 4px solid #CC2B2B;
 }
 
 .header {
   background-color: rgba(255, 255, 255, 0.95);
   /* remove the gradient */
   background-image: none !important;
-  border-bottom: 2px solid #FF9201 !important;
+  border-bottom: 2px solid #CC2B2B !important;
   line-height: 40px !important;
   box-shadow: 0 12px 6px -6px rgba(0, 0, 0, 0.2) !important;
 }
