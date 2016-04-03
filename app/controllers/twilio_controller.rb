@@ -11,7 +11,7 @@ class TwilioController < ApplicationController
     user = current_user
     msg = ""
     flash_msg = "Something went wrong!"
-    user_foods = user.foods.where(available: true).limit(10)
+    user_foods = user.foods.where(available: true).order("count").limit(10)
     user_foods.each do |food|
       dining_halls = food.dining_halls.inject { |str, dh| str + ", #{dh}" }
       meals = food.meals.inject { |str, meal| str + ", #{meal}" }

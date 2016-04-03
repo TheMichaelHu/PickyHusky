@@ -69,7 +69,7 @@ module Clockwork
        
       @client = Twilio::REST::Client.new account_sid, auth_token 
       msg = ""
-      user_foods = user.foods.where(available: true).limit(10)
+      user_foods = user.foods.where(available: true).order("count").limit(10)
       user_foods.each do |food|
         dining_halls = food.dining_halls.inject { |str, dh| str + ", #{dh}" }
         meals = food.meals.inject { |str, meal| str + ", #{meal}" }
