@@ -28,6 +28,8 @@ gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
 gem 'devise'
+gem 'twilio-ruby', '~> 4.11.1'
+
 
 # Screenscraping
 gem 'nokogiri'
