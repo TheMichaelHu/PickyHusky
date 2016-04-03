@@ -8,10 +8,11 @@ class TwilioController < ApplicationController
 
   def send
     unless params[:phone_number].nil? or params[:msg].nil?
-    @client.account.messages.create({
-      :from => '+16572346969', 
-      :to => params[:phone_number], 
-      :body => params[:msg],  
-    })
+      @client.account.messages.create({
+        :from => '+16572346969', 
+        :to => params[:phone_number], 
+        :body => params[:msg],  
+      })
+    end
   end
 end

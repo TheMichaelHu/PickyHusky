@@ -66,5 +66,4 @@ module Clockwork
   end
 
   every(1.day, 'main.job')
-  every(10.second, 'main.job')
 end

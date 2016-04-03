@@ -1,1 +1,20 @@
-<p>Hello?</p>
+<div class="container">
+  <h2>Foods</h2>
+  <%= form_tag action: :submit do %>
+    <% @foods.each_slice(3) do |foods| %>
+      <div class="row">
+        <% foods.each do |food| %>
+          <div class="col-xs-4">
+            <% if @user_foods.include? food %>
+              <%= check_box_tag("#{food}", "checked", true) %>
+            <% else %>
+              <%= check_box_tag("#{food}", "checked", false) %>
+            <% end %>
+            <%= label_tag("#{food}", "#{food}") %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <%= submit_tag "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>

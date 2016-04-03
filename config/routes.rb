@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   post 'send_sms' => 'twilio#send'
+  get 'foods' => 'foods#index'
+  post 'foods/submit' => 'foods#submit'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
