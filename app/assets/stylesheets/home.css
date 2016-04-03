@@ -9,8 +9,6 @@
 	src: url('http://lineless.github.io./res/fonts/Champagne&Limousines.ttf');
 }
 
-
-
 #bgimg { 
   position: fixed;
   top: 20%;
@@ -53,36 +51,73 @@
 }
 
 .section2 {
-	font-family: "champagne";
 	background-image: url(http://www.snazzyspace.com/wallpapers/8B0000_darkred.png);
 	background-attachment: fixed;
 	padding-top:20px;
 	opacity:1;
 	height: 100%;
 	text-align:center;
-	background-color: #990000;
 }
 
-.section2 h1 {
+section h1 {
+	font-family: "champagne";
 	font-size: 80px;
 	text-align: center;
 	font-weight:bold;
-	margin-left:20px;
-	color: white ;
+	/*margin-left:20px;*/
+	color: white;
 }
 
-.section2 p {
+section p {
+	font-size: 25px;
+	font-family: "champagne";
 	text-align: center;
 	padding-bottom: 40px;
+	color: white;
+}
+
+section {
+	background-attachment: fixed;
+	opacity:1;
+	background-size:cover;
 }
 
 .section3 {
-	background-image: url(https://slack-imgs.com/?c=1&url=http%3A%2F%2Fcdn.foodbeast.com.s3.amazonaws.com%2Fcontent%2Fwp-content%2Fuploads%2F2012%2F01%2Fcheezitspicytouchdowntenders.jpg);
+	background-image: url('iv_serving.jpg');
+}
+
+.section4 {
+	margin-top: -20px;
+	background-color: black;
+}
+
+.section4 {
 	background-attachment: fixed;
+	padding-top:20px;
 	opacity:1;
 	height: 100%;
-	min-height: 400px;
-	background-size:cover;
+	text-align:center;
+}
+
+.section6 {
+	margin-top: -20px;
+	background-color: #615445;
+}
+
+.section6 {
+	background-attachment: fixed;
+	padding-top:20px;
+	opacity:1;
+	height: 100%;
+	text-align:center;
+}
+
+.section5 {
+	background-image: url('lobster.jpg');
+}
+
+.section7 {
+	background-image: url('iv.jpg');
 }
 
 h2 {
@@ -92,14 +127,14 @@ h2 {
 }
 
 #about {
-	font-size: 20px;
+	font-size: 25px;
 	color:white;
 	padding-left: 100px;
 	padding-right:100px;
 }
 
 .intro .btn-primary:hover {
-  background-color: gray;
+  background-color: #615445;
 }
 
 .alert {
@@ -108,5 +143,3 @@ h2 {
   color: white;
   font-size: 20px;
 }
-	
-

@@ -5,16 +5,15 @@
 	<section class="section1">
 		<img id="bgimg" src="<%= asset_path 'chef_dog.jpg' %>">
 	    <div class="clip-text fadeMe">Picky Husky</div>
-	  	<div class="intro fadeMe">
-			<h2> Food you enjoy, every time.</h2>
-		
-		  <% if user_signed_in? %>
-        <%= link_to "SEND ME AN SMS NOW!", {controller: :twilio, action: :send_sms}, {class: 'btn fadeMe btn-primary btn-lg', method: :post} %>
-      <% else %>
-      	<%= link_to new_user_registration_path, class: 'btn fadeMe btn-primary btn-lg' do %>
-        	SIGN UP NOW! 
-      	<% end %>
-      <% end %>
+				<h2> Food you enjoy, every time.</h2>
+			
+			  <% if user_signed_in? %>
+	        <%= link_to "SEND ME AN SMS NOW!", {controller: :twilio, action: :send_sms}, {class: 'btn fadeMe btn-primary btn-lg', method: :post} %>
+	      <% else %>
+	      	<%= link_to new_user_registration_path, class: 'btn fadeMe btn-primary btn-lg' do %>
+	        	SIGN UP NOW! 
+	      	<% end %>
+	      <% end %>
 		</div>
 	</section>
 
@@ -23,29 +22,51 @@
 		<p id="about">Get notified when your favorite foods are being prepared</p>  
 	</section>
 
-
 	<section class="section3">
-		
+	</section>
+
+	<section class="section4">
+		<h1> Discover Your Next Love </h1>
+		<p>Browse our database and select which foods you want to be notified about. <br>You will only be notified of the rarest foods on your list.</p> 	
+	</section>
+
+	<section class="section5">
+	</section>
+
+	<section class="section6">
+		<h1>Don't Let it Get Away!</h1>
+		<p>Find today's menu quickly on our app, and add foods you like to your list.</p> 	
+	</section>
+
+	<section class="section7">
+		<div class="intro middleMe">
+			<center>
+				<% if user_signed_in? %>
+	        <%= link_to "SEND ME AN SMS NOW!", {controller: :twilio, action: :send_sms}, {class: 'btn fadeMe btn-primary btn-lg', method: :post} %>
+	      <% else %>
+	      	<%= link_to new_user_registration_path, class: 'btn fadeMe btn-primary btn-lg' do %>
+	        	SIGN UP NOW! 
+	      	<% end %>
+	      <% end %>
+			</center>
+		</div>
 	</section>
 
 	</div>
 
 </body>
 <style>
+
 	.btn { 
 		padding-top:15px; 
 		height:100px; 
-		background-color:gray;
+		background-color: #615445;
 		color:white;
 		font-size: 50px;
 		text-shadow: 1px 1px #000000; 
-		border-color:gray;
+		border-color: #615445;
 }
 	.btn-primary:hover {
 		background-color:black;
-	}
-
-	.section3 {
-
 	}
 </style>
