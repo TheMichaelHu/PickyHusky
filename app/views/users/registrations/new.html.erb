@@ -1,7 +1,15 @@
 <style>
 
-  * {text-align:center;
+  * {
+    text-align:center;
     
+  }
+  
+  h2 {
+    font-size:80px;
+    color:white;
+    font-weight:bold;
+    text-shadow:2px 2px #000000;
   }
 
   .pic {
@@ -9,30 +17,45 @@
     width: 500px;
   }
 
-  .section1 {
-    color:black;
+  body {
     background-image: url(<%= asset_path 'dining_hall.jpg' %>); 
     background-attachment: fixed;
     background-size: cover;
-    height: 100%;
-    margin-top:-100px;
-    padding-top: 100px;
-    padding-bottom: 20px;
   }
 /*  .page { background-image: url(https://i.ytimg.com/vi/-3eUutWw8gc/maxresdefault.jpg);
           background-attachment: fixed;
           background-size: cover;
           height:100%;
 */
+ .actions {
+   font-size:15px;
+   padding-top:10px
+}
+  .field  label {
+    color:white;
+    font-size:25px;
+    text-shadow: 2px 2px #000000
+}
+
+.field em {
+    padding-top:0px;
+    color:white;
+    font-size:10px;
+    position:relative;
+    bottom:10px;
+    text-shadow: 2px 2px #000000;
+}
+
+#pass {
+  position:relative;
+  right:0px;
+  bottom:0px;
+}
 
 </style>
 
+<body>
 
-
-<section class="section1">
-
-
-<div class="body">
 <h2>Sign Up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -47,13 +70,13 @@
     <%= f.label :phone_number %><br />
     <%= f.phone_field :phone_number, autofocus: true %>
   </div>
-
+   
   <div class="field">
     <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <div id="deez"><% if @minimum_password_length %></div>
+    <em style="position:relative; right:0px;">(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    <div id="pass"><%= f.password_field :password, autocomplete: "off" %></div>
   </div>
 
   <div class="field">
@@ -68,13 +91,6 @@
 
 <% end %>
 <%= render "users/shared/links" %>
-</div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
- 
-</section>
+
+</body>
+

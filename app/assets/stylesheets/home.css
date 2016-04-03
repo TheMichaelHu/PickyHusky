@@ -93,5 +93,10 @@ h2 {
 	padding-right:100px;
 }
 
+.btn a:hover {
+	background-color: blue;
+}
 
+.intro a:hover { color:red;
+}
 
