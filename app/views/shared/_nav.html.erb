@@ -12,6 +12,9 @@
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
               <li>
+                <%= link_to "SEARCH", {controller: :foods, action: :search}, {class: 'nav-link'} %>
+              </li>
+              <li>
                 <%= link_to "FOODS", {controller: :foods, action: :index}, {class: 'nav-link'} %>
               </li>
               <li>

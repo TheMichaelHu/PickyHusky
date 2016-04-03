@@ -11,6 +11,16 @@ class FoodsController < ApplicationController
     user.foods = Food.where(name: params.keys)
     user.save!
     flash[:notice] = 'Settings saved!'
-    redirect_to controller: :foods, action: :index
+    redirect_to root_url
+  end
+
+  def search
+    @foods = Food.all.map(&:name)
+    @user_foods = current_user.foods.map(&:name)
+    if params[:search]
+      @foods = Food.search(params[:search]).order("count").map(&:name)
+    else
+      @foods = Food.all.order("name").map(&:name)
+    end
   end
 end

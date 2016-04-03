@@ -1,0 +1,32 @@
+<div class="container search">
+  <%= form_tag('search', :method => "get", id: "search-form") do %>
+    <div class="row">
+      <div class="col-xs-11">
+        <%= text_field_tag :search, params[:search], placeholder: "Search Food", class: "form-control" %>
+      </div>
+      <div class="col-xs-1">
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @foods.present? %>
+    <%= form_tag action: :submit do %>
+      <div class='row food-list'>
+        <% @foods.each do |food| %>
+          <div class='col-xs-4'>
+            <% if @user_foods.include? food %>
+              <%= check_box_tag("#{food}", "checked", true) %>
+            <% else %>
+              <%= check_box_tag("#{food}", "checked", false) %>
+            <% end %>
+            <%= label_tag("#{food}", "#{food}") %>
+          </div>
+        <% end %>
+      </div>
+      <%= submit_tag "Submit", class: "btn btn-primary" %>
+    <% end %>
+  <% else %>
+    <p>There is no dining hall food containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+</div>

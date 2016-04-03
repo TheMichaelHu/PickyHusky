@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "users/registrations"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   post 'send_sms' => 'twilio#send_sms'
+  get 'foods/search' => 'foods#search'
   get 'foods' => 'foods#index'
   post 'foods/submit' => 'foods#submit'
 
