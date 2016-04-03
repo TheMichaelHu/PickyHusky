@@ -17,6 +17,6 @@ function manageHeights(h) {
   $(".section3").height(h*75/100);
   $(".section5").height(h*75/100);
   $(".section7").height(h);
-  $(".section7").css("padding", h*40/100+"px");
+  $(".section7").css("padding-top", h*40/100+"px");
   return 1;              // The function returns the product of p1 and p2
 }
