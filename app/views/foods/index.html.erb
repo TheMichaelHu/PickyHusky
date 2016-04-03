@@ -2,19 +2,25 @@
   <link rel="stylesheet" href="http://naokiyokoyama.github.io/webdesign/cdn/portfolio.css">
   <div id="Container" class="container">
     <center>
-      <span>Filter: </span>
-      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter="all">All</button>
-      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".Faves">My Favorites</button>
-      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".IV">International Village</button>
-      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".SWest">Stetson West</button>
-      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".SEast">Stetson East</button>
-      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".Outtakes">Outtakes</button>
+      <h2>Filter: </h2>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter="all">All</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter=".Faves">My Favorites</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter=".Today">Today</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter=".breakfast">Breakfast</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter=".lunch">Lunch</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter=".dinner">Dinner</button>
+      <br>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter=".IV">International Village</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter=".SWest">Stetson West</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter=".SEast">Stetson East</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-lg filter" data-filter=".Outtakes">Outtakes</button>
     </center>
     <h2>Foods</h2>
     <%= form_tag action: :submit do %>
       <% counter = 1 %>
       <% row = '' %>
       <% @foods.each do |food| %>
+      <% if food.name.length < 30 %>
         <div class=
           <% if counter % 3 == 0 %>
             <% row = ''%>
@@ -38,7 +44,19 @@
               <% classy << 'SEast '%>
             <% end %>
             <% if food.dining_halls.include? "Outtakes" %>
-              <% classy << 'Outtakes'%>
+              <% classy << 'Outtakes '%>
+            <% end %>
+            <% if food.available %>
+              <% classy << 'Today '%>
+            <% end %>
+            <% if food.meals.include? 'breakfast' %>
+              <% classy << 'breakfast '%>
+            <% end %>
+            <% if food.meals.include? 'lunch' %>
+              <% classy << 'lunch '%>
+            <% end %>
+            <% if food.meals.include? 'dinner' %>
+              <% classy << 'dinner '%>
             <% end %>
             '<%= classy %>'
 
@@ -54,7 +72,23 @@
 
       <% counter = counter + 1 %>
       <% end %>
-      <%= submit_tag "Submit", class: "btn btn-primary" %>
-    <% end %>
+      <% end %>
+<center style = "padding-bottom: 40px; font-family: Cambria">
+  <%= submit_tag "Submit", class: "btn btn-primary btn-lg" %>
+</center>    
+<% end %>
   </div>
 </body>
+<style>
+  .mix {
+    font-size: 20px;
+  }
+  h2{
+    font-family: Cambria;
+  }
+  .btn{
+    font-family: Cambria;
+    background-color: #990000;
+    color: white;
+  }
+</style>

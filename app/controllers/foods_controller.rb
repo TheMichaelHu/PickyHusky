@@ -2,7 +2,7 @@ class FoodsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @foods = Food.all
+    @foods = Food.limit(250).shuffle
     @user_foods = current_user.foods.map(&:name)
   end
 
