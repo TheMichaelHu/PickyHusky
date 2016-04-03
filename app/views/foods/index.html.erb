@@ -20,63 +20,63 @@
       <% counter = 1 %>
       <% row = '' %>
       <% @foods.each do |food| %>
-      <% if food.name.length < 30 %>
-        <div class=
-          <% if counter % 3 == 0 %>
-            <% row = ''%>
-          <% else %>
-            <% row = ''%>
-          <% end %>
-          '<%= row %>'
-        >
-          <% classy = 'col-xs-4 mix '%>
-            <div class=
-            <% if @user_foods.include? food.name %>
-              <% classy << 'Faves '%>
+        <% if food.name.length < 30 %>
+          <div class=
+            <% if counter % 3 == 0 %>
+              <% row = ''%>
+            <% else %>
+              <% row = ''%>
             <% end %>
-            <% if food.dining_halls.include? 'International Village' %>
-              <% classy << 'IV '%>
-            <% end %>
-            <% if food.dining_halls.include? 'Stetson West' %>
-              <% classy << 'SWest '%>
-            <% end %>
-            <% if food.dining_halls.include? 'Stetson East' %>
-              <% classy << 'SEast '%>
-            <% end %>
-            <% if food.dining_halls.include? "Outtakes" %>
-              <% classy << 'Outtakes '%>
-            <% end %>
-            <% if food.available %>
-              <% classy << 'Today '%>
-            <% end %>
-            <% if food.meals.include? 'breakfast' %>
-              <% classy << 'breakfast '%>
-            <% end %>
-            <% if food.meals.include? 'lunch' %>
-              <% classy << 'lunch '%>
-            <% end %>
-            <% if food.meals.include? 'dinner' %>
-              <% classy << 'dinner '%>
-            <% end %>
-            '<%= classy %>'
-
-            >
+            '<%= row %>'
+          >
+            <% classy = 'col-xs-4 mix '%>
+              <div class=
               <% if @user_foods.include? food.name %>
-                <%= check_box_tag("#{food.name}", "checked", true) %>
-              <% else %>
-                <%= check_box_tag("#{food.name}", "checked", false) %>
+                <% classy << 'Faves '%>
               <% end %>
-              <%= label_tag("#{food.name}", "#{food.name}") %>
-            </div>
-        </div>
+              <% if food.dining_halls.include? 'International Village' %>
+                <% classy << 'IV '%>
+              <% end %>
+              <% if food.dining_halls.include? 'Stetson West' %>
+                <% classy << 'SWest '%>
+              <% end %>
+              <% if food.dining_halls.include? 'Stetson East' %>
+                <% classy << 'SEast '%>
+              <% end %>
+              <% if food.dining_halls.include? "Outtakes" %>
+                <% classy << 'Outtakes '%>
+              <% end %>
+              <% if food.available %>
+                <% classy << 'Today '%>
+              <% end %>
+              <% if food.meals.include? 'breakfast' %>
+                <% classy << 'breakfast '%>
+              <% end %>
+              <% if food.meals.include? 'lunch' %>
+                <% classy << 'lunch '%>
+              <% end %>
+              <% if food.meals.include? 'dinner' %>
+                <% classy << 'dinner '%>
+              <% end %>
+              '<%= classy %>'
 
-      <% counter = counter + 1 %>
-      <% end %>
-      <% end %>
-<center style = "padding-bottom: 40px; font-family: Cambria">
-  <%= submit_tag "Submit", class: "btn btn-primary btn-lg" %>
-</center>    
-<% end %>
+              >
+                <% if @user_foods.include? food.name %>
+                  <%= check_box_tag("#{food.name}", "checked", true) %>
+                <% else %>
+                  <%= check_box_tag("#{food.name}", "checked", false) %>
+                <% end %>
+                <%= label_tag("#{food.name}", "#{food.name}") %>
+              </div>
+          </div>
+
+        <% counter = counter + 1 %>
+        <% end %>
+      <% end %>  
+    <% end %>
+    <center style = "padding-bottom: 40px; font-family: Cambria">
+      <%= submit_tag "Submit", class: "btn btn-primary btn-lg" %>
+    </center>  
   </div>
 </body>
 <style>

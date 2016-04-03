@@ -98,8 +98,15 @@ h2 {
 	padding-right:100px;
 }
 
-.btn {
+.intro .btn-primary:hover {
+  background-color: gray;
+}
 
+.alert {
+  background-color: #990000;
+  opacity:0.5;
+  color: white;
+  font-size: 20px;
 }
 	
 

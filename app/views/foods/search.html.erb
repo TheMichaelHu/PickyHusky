@@ -24,7 +24,9 @@
           </div>
         <% end %>
       </div>
-      <%= submit_tag "Submit", class: "btn btn-primary" %>
+      <center>
+        <%= submit_tag "Submit", class: "btn btn-primary" %>
+      </center>
     <% end %>
   <% else %>
     <p>There is no dining hall food containing the term(s) <%= params[:search] %>.</p>
