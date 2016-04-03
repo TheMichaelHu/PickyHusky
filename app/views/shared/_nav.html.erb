@@ -1,0 +1,41 @@
+<div class='navbar navbar-static-top'>
+    <nav class='navbar-inner header'>
+      <div class='container'>
+        <div class="collapse navbar-collapse navHeaderCollapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <a href="../../../../../../.." class='brand'>
+                PICKY HUSKY<i class="fa fa-paw fa-lg" style="text-shadow: 1px 1px black, -1px -1px #666;"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li>
+                <%= link_to new_user_session_path, class: 'nav-link' do %>
+                  FOODS <i class="fa fa-pencil"></i>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, class: 'nav-link', :method => :delete do %>
+                  LOGOUT <i class="fa fa-pencil"></i>
+                <% end %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to new_user_session_path, class: 'nav-link' do %>
+                  LOGIN <i class="fa fa-pencil"></i>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to new_user_registration_path, class: 'nav-link' do %>
+                  SIGN UP <i class="fa fa-pencil"></i>
+                <% end %>
+              </li>
+            <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
