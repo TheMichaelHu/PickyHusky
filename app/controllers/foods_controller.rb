@@ -2,7 +2,7 @@ class FoodsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @foods = Food.all.map(&:name)
+    @foods = Food.all
     @user_foods = current_user.foods.map(&:name)
   end
 

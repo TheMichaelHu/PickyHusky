@@ -1,20 +1,60 @@
-<div class="container">
-  <h2>Foods</h2>
-  <%= form_tag action: :submit do %>
-    <% @foods.each_slice(3) do |foods| %>
-      <div class="row">
-        <% foods.each do |food| %>
-          <div class="col-xs-4">
-            <% if @user_foods.include? food %>
-              <%= check_box_tag("#{food}", "checked", true) %>
-            <% else %>
-              <%= check_box_tag("#{food}", "checked", false) %>
+<body>
+  <link rel="stylesheet" href="http://naokiyokoyama.github.io/webdesign/cdn/portfolio.css">
+  <div id="Container" class="container">
+    <center>
+      <span>Filter: </span>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter="all">All</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".Faves">My Favorites</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".IV">International Village</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".SWest">Stetson West</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".SEast">Stetson East</button>
+      <button type="button" aria-hidden="true" class="btn btn-default btn-mid filter" data-filter=".Outtakes">Outtakes</button>
+    </center>
+    <h2>Foods</h2>
+    <%= form_tag action: :submit do %>
+      <% counter = 1 %>
+      <% row = '' %>
+      <% @foods.each do |food| %>
+        <div class=
+          <% if counter % 3 == 0 %>
+            <% row = ''%>
+          <% else %>
+            <% row = ''%>
+          <% end %>
+          '<%= row %>'
+        >
+          <% classy = 'col-xs-4 mix '%>
+            <div class=
+            <% if @user_foods.include? food.name %>
+              <% classy << 'Faves '%>
             <% end %>
-            <%= label_tag("#{food}", "#{food}") %>
-          </div>
-        <% end %>
-      </div>
+            <% if food.dining_halls.include? 'International Village' %>
+              <% classy << 'IV '%>
+            <% end %>
+            <% if food.dining_halls.include? 'Stetson West' %>
+              <% classy << 'SWest '%>
+            <% end %>
+            <% if food.dining_halls.include? 'Stetson East' %>
+              <% classy << 'SEast '%>
+            <% end %>
+            <% if food.dining_halls.include? "Outtakes" %>
+              <% classy << 'Outtakes'%>
+            <% end %>
+            '<%= classy %>'
+
+            >
+              <% if @user_foods.include? food.name %>
+                <%= check_box_tag("#{food.name}", "checked", true) %>
+              <% else %>
+                <%= check_box_tag("#{food.name}", "checked", false) %>
+              <% end %>
+              <%= label_tag("#{food.name}", "#{food.name}") %>
+            </div>
+        </div>
+
+      <% counter = counter + 1 %>
+      <% end %>
+      <%= submit_tag "Submit", class: "btn btn-primary" %>
     <% end %>
-    <%= submit_tag "Submit", class: "btn btn-primary" %>
-  <% end %>
-</div>
+  </div>
+</body>
