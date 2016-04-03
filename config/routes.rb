@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  post 'send_sms' => 'twilio#send'
+  post 'send_sms' => 'twilio#send_sms'
   get 'foods' => 'foods#index'
   post 'foods/submit' => 'foods#submit'
 

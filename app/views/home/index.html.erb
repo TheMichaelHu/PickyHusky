@@ -7,7 +7,13 @@
 	    <div class="clip-text fadeMe">Picky Husky</div>
 	  	<div class="intro fadeMe">
 			<h2> Food you enjoy, every time.</h2>
-		     <p><a class="btn fadeMe btn-primary btn-lg" href="../../../../../../../users/sign_up"  style='color: white; font-size: 50px;' role="button">SIGN UP NOW! </a></p>
+		  <% if user_signed_in? %>
+        <%= link_to "SEND ME AN SMS NOW!", {controller: :twilio, action: :send_sms}, {class: 'btn fadeMe btn-primary btn-lg', method: :post} %>
+      <% else %>
+      	<%= link_to new_user_registration_path, class: 'btn fadeMe btn-primary btn-lg' do %>
+        	SIGN UP NOW! <i class="fa fa-pencil"></i>
+      	<% end %>
+      <% end %>
 		</div>
 	</section>
 
