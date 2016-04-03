@@ -1,20 +1,20 @@
 <body>
 	
-	<div class="home-html">
+	
 
-	<section class="section1">
+	<section class="section1 intro">
 		<img id="bgimg" src="<%= asset_path 'chef_dog.jpg' %>">
 	    <div class="clip-text fadeMe">Picky Husky</div>
 				<h2> Food you enjoy, every time.</h2>
-			
-			  <% if user_signed_in? %>
-	        <%= link_to "SEND ME AN SMS NOW!", {controller: :twilio, action: :send_sms}, {class: 'btn fadeMe btn-primary btn-lg', method: :post} %>
-	      <% else %>
-	      	<%= link_to new_user_registration_path, class: 'btn fadeMe btn-primary btn-lg' do %>
-	        	SIGN UP NOW! 
-	      	<% end %>
-	      <% end %>
-		</div>
+				<div class="intro">
+				  <% if user_signed_in? %>
+		        <%= link_to "SEND ME AN SMS NOW!", {controller: :twilio, action: :send_sms}, {class: 'btn fadeMe btn-primary btn-lg', method: :post} %>
+		      <% else %>
+		      	<%= link_to new_user_registration_path, class: 'btn fadeMe btn-primary btn-lg' do %>
+		        	SIGN UP NOW! 
+		      	<% end %>
+		      <% end %>
+				</div>
 	</section>
 
 	<section class="section2">
