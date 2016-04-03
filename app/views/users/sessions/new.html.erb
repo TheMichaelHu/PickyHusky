@@ -1,3 +1,42 @@
+<style>
+  * {text-align:center;
+  }
+  body {
+    background-image: url(<%= asset_path 'stetson.jpg' %>);
+    background-attachment: fixed;
+    background-size: cover;
+
+  }
+
+  h2 {
+    font-size:80px;
+    color:white;
+    font-weight:bold;
+    text-shadow:2px 2px #000000;
+  }
+
+   .actions {
+   font-size:15px;
+   padding-top:10px
+}
+  .field  label {
+    color:white;
+    font-size:25px;
+    text-shadow: 2px 2px #000000
+}
+
+  .rest {
+    font-size:20px;
+    color: white; !important
+  }
+
+  a { 
+    color:white;}
+
+</style>
+
+<body>
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -23,4 +62,7 @@
   </div>
 <% end %>
 
+<div class="rest">
 <%= render "users/shared/links" %>
+</div>
+</body>

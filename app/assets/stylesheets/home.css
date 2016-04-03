@@ -9,7 +9,9 @@
 	src: url('http://lineless.github.io./res/fonts/Champagne&Limousines.ttf');
 }
 
-img#bgimg { 
+
+
+#bgimg { 
   position: fixed;
   top: 20%;
   left: 50%;
@@ -57,6 +59,8 @@ img#bgimg {
 	padding-top:20px;
 	opacity:1;
 	height: 100%;
+	text-align:center;
+	background-color: #990000;
 }
 
 .section2 h1 {
@@ -73,11 +77,12 @@ img#bgimg {
 }
 
 .section3 {
-	background-image: url(http://rutdesign.com/wp-content/uploads/2012/05/Rut-Yehuda5.jpg);
+	background-image: url(https://slack-imgs.com/?c=1&url=http%3A%2F%2Fcdn.foodbeast.com.s3.amazonaws.com%2Fcontent%2Fwp-content%2Fuploads%2F2012%2F01%2Fcheezitspicytouchdowntenders.jpg);
 	background-attachment: fixed;
 	opacity:1;
 	height: 100%;
 	min-height: 400px;
+	background-size:cover;
 }
 
 h2 {
@@ -93,10 +98,8 @@ h2 {
 	padding-right:100px;
 }
 
-.btn a:hover {
-	background-color: blue;
-}
+.btn {
 
-.intro a:hover { color:red;
 }
+	
 
