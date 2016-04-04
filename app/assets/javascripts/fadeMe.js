@@ -12,6 +12,12 @@ $(window).resize(function() {
   var junk = manageHeights(h);
 });
 
+$(window).scroll(function() {
+  var $window = $(window);
+  var h = $window.height();
+  var junk = manageHeights(h);
+});
+
 function manageHeights(h) {
 	$(".section1").height(h*80/100);
   $(".section3").height(h*75/100);
