@@ -86,5 +86,5 @@ module Clockwork
 
   end
 
-  every(1.day, 'main.job')
+  every(1.day, 'main.job', :at => '06:00')
 end
